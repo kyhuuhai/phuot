@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd"
+	logicalFilePath="db.changelog.dbmaster-1.0.xml">
+	<changeSet author="PC (generated)" id="1478168843198-1">
+        <createTable tableName="category">
+            <column name="idcategory" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-2">
+        <createTable tableName="comment">
+            <column name="idcomment" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="username" type="VARCHAR(45)"/>
+            <column name="time" type="VARCHAR(45)"/>
+            <column name="idpost" type="INT"/>
+            <column name="iduser" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-3">
+        <createTable tableName="food">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(45)"/>
+            <column name="description" type="VARCHAR(45)"/>
+            <column name="image" type="VARCHAR(45)"/>
+            <column name="price" type="VARCHAR(45)"/>
+            <column name="idcategory" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-4">
+        <createTable tableName="group">
+            <column name="idgroup" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="host" type="VARCHAR(45)"/>
+            <column name="username" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-5">
+        <createTable tableName="location">
+            <column name="idlocation" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(45)"/>
+            <column name="locationcol" type="VARCHAR(45)"/>
+            <column name="address" type="VARCHAR(45)"/>
+            <column name="idcategory" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-6">
+        <createTable tableName="motel">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(45)"/>
+            <column name="description" type="VARCHAR(45)"/>
+            <column name="image" type="VARCHAR(45)"/>
+            <column name="price" type="VARCHAR(45)"/>
+            <column name="idcategory" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-7">
+        <createTable tableName="post">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="VARCHAR(45)"/>
+            <column name="createdate" type="VARCHAR(45)"/>
+            <column name="iduser" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-8">
+        <createTable tableName="service">
+            <column name="idservice" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(45)"/>
+            <column name="price" type="VARCHAR(45)"/>
+            <column name="image" type="VARCHAR(45)"/>
+            <column name="description" type="VARCHAR(45)"/>
+            <column name="idcategory" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-9">
+        <createTable tableName="user">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="username" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="passwork" type="VARCHAR(120)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="address" type="VARCHAR(45)"/>
+            <column name="email" type="VARCHAR(45)"/>
+            <column name="phone" type="INT"/>
+            <column name="hobby" type="VARCHAR(45)"/>
+            <column name="idgroup" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-10">
+        <createTable tableName="user_role">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="role" type="VARCHAR(45)"/>
+            <column name="username" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-11">
+        <addPrimaryKey columnNames="idcategory" constraintName="PRIMARY" tableName="category"/>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-12">
+        <addPrimaryKey columnNames="idcomment" constraintName="PRIMARY" tableName="comment"/>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-13">
+        <addPrimaryKey columnNames="id" constraintName="PRIMARY" tableName="food"/>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-14">
+        <addPrimaryKey columnNames="idgroup" constraintName="PRIMARY" tableName="group"/>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-15">
+        <addPrimaryKey columnNames="idlocation" constraintName="PRIMARY" tableName="location"/>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-16">
+        <addPrimaryKey columnNames="id" constraintName="PRIMARY" tableName="motel"/>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-17">
+        <addPrimaryKey columnNames="id" constraintName="PRIMARY" tableName="post"/>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-18">
+        <addPrimaryKey columnNames="idservice" constraintName="PRIMARY" tableName="service"/>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-19">
+        <addPrimaryKey columnNames="id" constraintName="PRIMARY" tableName="user"/>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-20">
+        <addPrimaryKey columnNames="id" constraintName="PRIMARY" tableName="user_role"/>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-21">
+        <addUniqueConstraint columnNames="username" constraintName="username_UNIQUE" tableName="user"/>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-22">
+        <createIndex indexName="ca-food_idx" tableName="food">
+            <column name="idcategory"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-23">
+        <createIndex indexName="cate-mote_idx" tableName="motel">
+            <column name="idcategory"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-24">
+        <createIndex indexName="cate-servi_idx" tableName="service">
+            <column name="idcategory"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-25">
+        <createIndex indexName="cate_idx" tableName="location">
+            <column name="idcategory"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-26">
+        <createIndex indexName="cm-post_idx" tableName="comment">
+            <column name="idpost"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-27">
+        <createIndex indexName="cm-user_idx" tableName="comment">
+            <column name="iduser"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-28">
+        <createIndex indexName="use-post_idx" tableName="post">
+            <column name="iduser"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-29">
+        <createIndex indexName="usr-grp_idx" tableName="user">
+            <column name="idgroup"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-30">
+        <addForeignKeyConstraint baseColumnNames="idcategory" baseTableName="food" constraintName="ca-food" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="idcategory" referencedTableName="category"/>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-31">
+        <addForeignKeyConstraint baseColumnNames="idcategory" baseTableName="location" constraintName="cate" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="idcategory" referencedTableName="category"/>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-32">
+        <addForeignKeyConstraint baseColumnNames="idcategory" baseTableName="motel" constraintName="cate-mote" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="idcategory" referencedTableName="category"/>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-33">
+        <addForeignKeyConstraint baseColumnNames="idcategory" baseTableName="service" constraintName="cate-servi" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="idcategory" referencedTableName="category"/>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-34">
+        <addForeignKeyConstraint baseColumnNames="idpost" baseTableName="comment" constraintName="cm-post" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="post"/>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-35">
+        <addForeignKeyConstraint baseColumnNames="iduser" baseTableName="comment" constraintName="cm-user" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="user"/>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-36">
+        <addForeignKeyConstraint baseColumnNames="id" baseTableName="user" constraintName="us-rl" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="user_role"/>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-37">
+        <addForeignKeyConstraint baseColumnNames="iduser" baseTableName="post" constraintName="use-post" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="user"/>
+    </changeSet>
+    <changeSet author="PC (generated)" id="1478168843198-38">
+        <addForeignKeyConstraint baseColumnNames="idgroup" baseTableName="user" constraintName="usr-grp" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="idgroup" referencedTableName="group"/>
+    </changeSet>
+</databaseChangeLog>
